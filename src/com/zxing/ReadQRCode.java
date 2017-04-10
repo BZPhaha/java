@@ -18,7 +18,7 @@ public class ReadQRCode {
 	public static void main(String[] args) {
 		try {
 			MultiFormatReader formatReader = new MultiFormatReader();
-			File file = new File("E:/java-study/testQR.png");
+			File file = new File("E:/java-study/2.png");//E:/java-study/testQR.png");
 			BufferedImage image = ImageIO.read(file);
 			BinaryBitmap binaryBitmap = new BinaryBitmap(new HybridBinarizer(new  BufferedImageLuminanceSource(image)));
 			
@@ -27,12 +27,13 @@ public class ReadQRCode {
 			hints.put(EncodeHintType.CHARACTER_SET, "utf-8");
 			
 			Result result = formatReader.decode(binaryBitmap,hints);
-			System.out.println("½âÎö½á¹û"+result.toString());
-			System.out.println("¶þÎ¬Âë¸ñÊ½ÀàÐÍ"+result.getBarcodeFormat());
-			System.out.println("¶þÎ¬ÂëÎÄ±¾ÄÚÈÝ£º"+result.getText());
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"+result.toString());
+			System.out.println("ï¿½ï¿½Î¬ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½"+result.getBarcodeFormat());
+			System.out.println("ï¿½ï¿½Î¬ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½Ý£ï¿½"+result.getText());
 		
 		} catch (Exception e) {
 			// TODO: handle exception
+			e.printStackTrace();
 		}
 
 	}

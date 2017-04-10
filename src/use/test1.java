@@ -2,16 +2,21 @@ package use;
 
 public class test1 {
 	public static void main(String[] args) {
-		int n=99;
+		/*int n=99;
 		int result=calculate(n);
-		System.out.print(result);	
+		System.out.print(result);*/
+		Long a = 3L ^ 145179942L ^ 145179942L;
+		Long b = 3L ^ (145179942L ^ 145179942L);
+		System.out.println("aaaa"+a);
+		System.out.println("bbbb"+b);
+		
 	}
 	
 	static int calculate(int n){
 		int result=0;
 		boolean flag=false;
 		//No.1
-		//¿ªÊ¼Ð´´úÂë£¬²»ÓÃ²Ù×÷·û¼ÆËã1+2+¡­¡­+n
+		//ï¿½ï¿½Ê¼Ð´ï¿½ï¿½ï¿½ë£¬ï¿½ï¿½ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1+2+ï¿½ï¿½ï¿½ï¿½+n
 		return n > 0 ? n + calculate(n-1) : 0 ;
 		//end_code
 	}
